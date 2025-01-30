@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET712 - Ehsan chowdhury</title>
+</head>
+<body>
+    <h1>ET712 - Ehsan chowdhury</h1>
+    <script>
+        console.log("\n----------Example 1: variables--------------")
+        //declare a variable with intial value
+        let username = "batman" //string variable
+        let id = 123456; //numerical
+        let check = false; //Boolean variable
+        //console information
+        console.log("Entered username = ", username);
+        //console.log(username, "has id number = ", id);
+        console.log(`${username} has id number = ${id}`)
+
+        console.log("\n----------Example 2: variables--------------")
+        //collect two numbers using a prompt window and display the sum of the two numbers in the console
+        //step 1: declare variables
+        let n1;
+        let n2;
+        //step 2: collect two numbers from the user
+        n1 = parseInt(prompt("Enter number 1"))
+        n2 = parseInt(prompt("Enter number 2"))
+        let sum = n1 + n2
+        //step 3: display result in the console
+        console.log(`The sum of numbers ${n1} and ${n2} is ${sum}`)
+
+        console.log("\n----------Example 3: string variables--------------")
+        //accessing characters in a string
+        let firstname = "Bruce Wayne"
+        console.log(`The third character = ${firstname[2]}`)
+        //find the length of a string
+        let totalchar = firstname.length
+        console.log(`${firstname} has ${totalchar} characters`)
+        //convert string to uppercase
+        console.log(firstname.toUpperCase())
+        //convert string to lowercase
+        firstname = firstname.toLowerCase()
+        console.log(firstname)
+        //search for a specific character
+        let mysearch = firstname.search('way')
+        console.log(`The found index is = ${mysearch}`) //if it doesn't find a match, returns -1
+        //remove white space
+        let password = "    joker 123    "
+        console.log(password)
+        password = password.trim()
+        console.log(password)
+        //subtracting character
+        console.log(password.substr(2,3)) //2 = index, 3 = number of characters from index
+        //replacing characters
+        let school = "Queensborough Community College"
+        console.log(school)
+        console.log(school.replace("Community", "PARK"))
+        //extracting
+        console.log(school.slice(6,13))
+
+        console.log("\n----------Exercise--------------")
+        let word = prompt("Enter Word")
+        console.log(`The second letter of the word is: ${word[1]}`)
+        console.log(`The length of the word ${word} is ${word.length}`)
+        console.log(word.toUpperCase())
+        console.log(`The last two characters of the word ${word} are ${word.slice(-2)}`)
+    </script>
+</body>
+</html>
