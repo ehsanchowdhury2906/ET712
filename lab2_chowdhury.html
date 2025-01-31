@@ -78,8 +78,30 @@
           console.log(`${userinput} is a number`)
        }
 
+       console.log('\n----- Example 6: logical operators in JS------- ') 
+       let password = prompt("Enter a password")
+       password = password.trim().toLowerCase() /// remove whitespace before and after the password
+       // test if the password has 6+ characters and no whitespace is between characters
+       if (password.length >= 6 && password.indexOf("")===-1){
+            console.log(`${password} is a valid`)
+         }
+         else{
+             console.log(`${password} is NOT at the right format`)
+         }
+            
+              console.log('\n----- EXERCISE -----')
+let userInput = prompt("Enter a value:").trim();
 
-       
-    </script>
+if (!userInput) {
+    console.log("Input cannot be empty.");
+} else if (!isNaN(userInput)) {
+    let numberValue = Number(userInput);
+    console.log(`${userInput} is a ${numberValue > 0 ? 'positive' : numberValue < 0 ? 'negative' : 'neutral'} number.`);
+} else {
+    console.log(`'${userInput}' is a string.`);
+}
+
+         
+     </script>
 </body>
 </html>
