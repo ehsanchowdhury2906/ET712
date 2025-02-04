@@ -59,12 +59,20 @@
         //extracting
         console.log(school.slice(6,13))
 
-        console.log("\n----------Exercise--------------")
-        let word = prompt("Enter Word")
-        console.log(`The second letter of the word is: ${word[1]}`)
-        console.log(`The length of the word ${word} is ${word.length}`)
-        console.log(word.toUpperCase())
-        console.log(`The last two characters of the word ${word} are ${word.slice(-2)}`)
+     console.log("\n----------Exercise--------------");
+
+let word = prompt("Enter Word");
+
+let secondLetter = word.charAt(1);
+let wordLength = word.length;
+let upperCaseWord = word.toUpperCase();
+let lastTwoChars = word.substring(word.length - 2);
+
+console.log(`The second letter of the word is: ${secondLetter}`);
+console.log(`The length of the word ${word} is ${wordLength}`);
+console.log(upperCaseWord);
+console.log(`The last two characters of the word ${word} are ${lastTwoChars}`);
+
     </script>
 </body>
 </html>
