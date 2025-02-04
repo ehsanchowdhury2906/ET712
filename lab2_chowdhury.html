@@ -94,7 +94,7 @@ let userInput = prompt("Enter a value:").trim();
 
 if (!userInput) {
     console.log("Input cannot be empty.");
-} else if (!isNaN(userInput)) {
+} else if (isNaN(userInput)) {
     let numberValue = Number(userInput);
     console.log(`${userInput} is a ${numberValue > 0 ? 'positive' : numberValue < 0 ? 'negative' : 'neutral'} number.`);
 } else {
