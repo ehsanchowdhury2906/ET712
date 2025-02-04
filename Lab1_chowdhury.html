@@ -61,17 +61,14 @@
 
      console.log("\n----------Exercise--------------");
 
+console.log("\n----------Exercise--------------");
+
 let word = prompt("Enter Word");
 
-let secondLetter = word.charAt(1);
-let wordLength = word.length;
-let upperCaseWord = word.toUpperCase();
-let lastTwoChars = word.substring(word.length - 2);
-
-console.log(`The second letter of the word is: ${secondLetter}`);
-console.log(`The length of the word ${word} is ${wordLength}`);
-console.log(upperCaseWord);
-console.log(`The last two characters of the word ${word} are ${lastTwoChars}`);
+console.log("The second letter of the word is: " + word.slice(1, 2));
+console.log("The length of the word " + word + " is " + word.split('').length);
+console.log(word.split('').join('').toUpperCase());
+console.log("The last two characters of the word " + word + " are " + word.slice(-2));
 
     </script>
 </body>
