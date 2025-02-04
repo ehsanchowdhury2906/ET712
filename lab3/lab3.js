@@ -53,15 +53,17 @@ for(let index = 0; index<username.length; index++){
 }
 console.log(`there is/are ${counter_e} letter e in username`)
 console.log("/n ----- exercise for loop")
-let num =[-3, 10, 0, 8, -9, 5, -2, 8, 6, -1]
-let sumNeg =0;
-let sumPos =0;
-for(let index = 0; index<num.length;index++){
-    if(num[index]<0){
-        sumNeg += num[index];
-    }else{
-        sumPos += num[index];
-    }
-}
-console.log(`The sum of all the negative numbers = ${sumNeg}`)
-console.log(`The sum of all the postive numbers = ${sumPos}`)
+console.log("\n-------- EXERCISE FOR LOOP ----------");
+
+let num = [-3, 10, 0, 8, -9, 5, -2, 8, 6, -1];
+let sumNeg = 0, sumPos = 0;
+
+num.forEach((value) => {
+
+    sumNeg += (value < 0) ? value : 0;
+
+    sumPos += (value >= 0) ? value : 0;
+});
+
+console.log(`Sum of all the negative numbers = ${sumNeg}`);
+console.log(`Sum of all the positive numbers = ${sumPos}`);
