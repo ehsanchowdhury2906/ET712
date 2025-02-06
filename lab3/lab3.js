@@ -67,3 +67,54 @@ num.forEach((value) => {
 
 console.log(`Sum of all the negative numbers = ${sumNeg}`);
 console.log(`Sum of all the positive numbers = ${sumPos}`);
+
+console.log("\n---- Example 6: while loop as a counter----")
+// use a while loop to display number from 0 to 4 
+let y = 0;
+while(y<=4){
+    console.log(y)
+    y++
+}
+
+console.log("\n ---- example 7: while loop application")
+// using while loop to match if the user number matches the secret number 
+const SECRET = 8
+//collect a number from the user 
+let usernumber = parseInt(prompt("Enter a number: "))
+let guesscounter = 0;
+//run a while loop to recollect the user number if the number doesn't match
+while(usernumber !== SECRET ){
+    guesscounter++
+    usernumber = parseInt(prompt("Wrong guess! Enter a number: "))
+}
+console.log(`${usernumber} is right! Total attempts: ${guesscounter}`)
+
+console.log("\n ---- example 8: break ina while loop")
+// create an app to sum all even numbers, the app continously collects a postive number and stop if a negative number is entered
+let sumeven = 0;
+let collectnumber;
+while(true){
+    let collectnumber = parseInt(prompt("Enter a postive number"))
+    if(collectnumber<0){
+        break
+    }
+    else{
+        if(collectnumber%2===0){
+            sumeven += collectnumber //sumeven = sumeven + collectnumber
+        }
+    }
+}
+console.log(`the sum of all even number is ${sumeven}`)
+
+console.log("\n ---- example 9: continue in a for loop-----")
+//print number from -5 to 5 , -5 -4 -3 -2 -1 0 1 2 3 4 5
+for(let n=-5; n<=5; n++){
+    if(n%2===0){
+        continue
+    }
+    console.log(n)
+}
+
+console.log("\n ---- exercise B -----")
+
+
