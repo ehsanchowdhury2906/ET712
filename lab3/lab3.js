@@ -36,7 +36,7 @@ for(initialvalue; initialvalue<=20 ; initialvalue++){
  let numbers =[5, -3, 10, -9, 2]
  let counternegative = 0 
 for(let index = 0; index<numbers.length ; index ++){
-    if(numbers{index}<0){
+    if(numbers[index]<0){
         counternegative++
     }
 }
