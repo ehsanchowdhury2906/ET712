@@ -115,5 +115,18 @@ for(let n=-5; n<=5; n++){
     console.log(n)
 }
 
-console.log("\n ---- exercise B -----")
+console.log("\n-------- EXERCISE B ----------")
+let attempts = 0;
+const maxAttempts = 3;
+
+do {
+    let pin = parseInt(prompt("Enter your PIN: "));
+    if (pin === 1111) break;
+    attempts++;
+} while (attempts < maxAttempts);
+
+if (attempts === maxAttempts) {
+    console.log("Account is locked!");
+}
+
 
