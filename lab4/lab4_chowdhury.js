@@ -27,7 +27,7 @@ function sum(x,y){
 }
 console.log("\n ---- example 4: snake eyes ")
 // function to print 'snake eye' if a 1 and 1 is passed to the function
-function snakeeyes(x,y){
+function snakeEyes(x,y){
     if(x===1 && y ===1){
         console.log("SNAKE EYES!")
     }
