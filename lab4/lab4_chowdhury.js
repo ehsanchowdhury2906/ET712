@@ -36,8 +36,8 @@ function snakeEyes(x,y){
     }
 }
 // call snake_eyes function
-snake_eyes(3,2)
-snake_eyes(1,1)
+snakeEyes(3,2)
+snakeEyes(1,1)
 
 console.log("\n --- example 5: functions that return value")
 // functions that returns the double of the number. The number is passed to the function 
