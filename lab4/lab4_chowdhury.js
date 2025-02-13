@@ -68,7 +68,7 @@ console.log(`Is the temperature greater than 75? ${temp_result}`)
 
 
 
-console.log("student's full name")
+
 console.log("\n--- example 7: built-in function")
 // built-in function in js is called as a global variable 
 // math function
