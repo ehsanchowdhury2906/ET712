@@ -85,7 +85,7 @@ console.log(`sqaure root of 20 = ${Math.sqrt(20)}`)
 // random number generator. random() method returns a random number between 0 and 1
 console.log(`Random number = ${Math.random()}`)
 // random number between 1 and 9 
-let n = 1 + round(Math.random()*8)
+let n = 1 + Math.round(Math.random()*8)
 console.log(`Number between 1 and 9 = ${n}`)
 console.log("\n -- example 8 : random number --")
 // function to randomly generate a number between -5 and 5
