@@ -104,4 +104,14 @@ function randomcolor(picked_index){
     return colors[random_index] // return the random picked color
 }
 
+console.log("---------- EXERCISE ----------");
+
+function checkName() {
+    let name = prompt("What is your name?").trim(); 
+    
+    if (name === "") {
+        console.log("You forgot to enter a name! Please enter a name again.");
+    } else if (!isNaN(name)) {
+        console.log(`${name} is invalid!
+
 console.log(`Color picked = ${randomcolor()}`)
