@@ -107,11 +107,13 @@ function randomcolor(picked_index){
 console.log("---------- EXERCISE ----------");
 
 function checkName() {
-    let name = prompt("What is your name?").trim(); 
+    let name = prompt("What is your name?"); 
     
-    if (name === "") {
+    if (name === null || name.trim() === "") {
         console.log("You forgot to enter a name! Please enter a name again.");
     } else if (!isNaN(name)) {
-        console.log(`${name} is invalid!
-
-console.log(`Color picked = ${randomcolor()}`)
+        console.log(`${name} is invalid! Please enter a name again.`);
+    } else {
+        console.log(`Welcome ${name.trim().toUpperCase()} to the class!`);
+    }
+}
