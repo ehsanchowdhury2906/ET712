@@ -75,10 +75,10 @@ myCollection.addMovie(movieC);
 myCollection.showMovies();
 
 
-myCollection.removeMovie("Inception");
+myCollection.removeMovie("Joker");
 
 
-myCollection.removeMovie("Avatar");
+myCollection.removeMovie("The Batman");
 
 
 const emptyCollection = new MovieCollection();
