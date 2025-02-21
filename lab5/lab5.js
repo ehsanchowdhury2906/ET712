@@ -94,3 +94,39 @@ yell(8)
 console.log("end of example 8")
 
 console.log("\n -- exercise -- ")
+
+const myCalculator = {
+  
+    message: "Area and Volume Calculator",
+    side: 2,
+
+    
+    areaSquare() {
+        return `${this.side ** 2}`;
+    },
+    areaVolume() {
+        return `${this.side ** 3}`;
+    }
+};
+
+console.log(`${myCalculator.message} with side length ${myCalculator.side}`);
+console.log(`Area of the square: ${myCalculator.areaSquare()}`);
+console.log(`Volume of the cube: ${myCalculator.areaVolume()}`);
+
+console.log("\n -- exercise 2 -- ")
+
+
+function safeDivide(a, b) {
+    try {
+        if (typeof a !== "number" || typeof b !== "number") throw "Invalid input";
+        console.log(a / b);
+    } catch {
+        console.log("Error: Cannot divide these values.");
+    } finally {
+        console.log("Finished division process.");
+    }
+}
+
+safeDivide(8, 4);
+safeDivide("Word", 4);
+
