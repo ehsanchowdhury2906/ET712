@@ -58,9 +58,10 @@ class MovieCollection {
 }
 
 
-const movieA = new Movie("Inception", "Christopher Nolan", 2010);
-const movieB = new Movie("The Matrix", "The Wachowskis", 1999);
-const movieC = new Movie("Interstellar", "Christopher Nolan", 2014);
+const movieA = new Movie("The Batman", "Matt Reeves", 2022);
+const movieB = new Movie("Joker", "Todd Phillips", 2019);
+const movieC = new Movie("Avengers: Endgame", "Anthony and Joe Russo", 2019);
+
 
 
 const myCollection = new MovieCollection();
