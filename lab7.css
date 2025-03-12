@@ -17,3 +17,32 @@
     background-color: aquamarine;
     margin-bottom: 3em;
 }
+
+.divexample8{
+    width: 300px;
+    height: 300px;
+    margin: 2em auto;
+    border: solid px gray;
+}
+div.divs2, div.divs3{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 20px;
+}
+.ps3{
+    font-size: 25px;
+    color: olive;
+}
+div.divs4{
+    width: 100px;
+    height: 100px;
+    background-color: indigo;
+    margin: 20px;
+}
+div.divs5{
+    width: 300px;
+    height: 100px;
+    background-color: aqua;
+    margin: 20px;
+}
