@@ -22,7 +22,7 @@ console.log("\n---- Example 4: CLICK EVENT to change text content ----")
 let btnmsg = document.querySelector(".btnmsg")
 let msg = document.querySelector(".msg")
 btnmsg.addEventListener("click", function(){
-    msg.innerHTML = "Good afternoon <b> Wu </b>"
+    msg.innerHTML = "Good afternoon <b> ehsan </b>"
 })
 
 console.log("\n ----- Example 5: Changing shapes mini-app")
