@@ -43,6 +43,30 @@
 
     </section>
 
+    // exercise lab 
+    <div id="circle">Click Me</div>
+  <p>Counter: <span id="counter">0</span></p>
+  <button id="resetButton">Reset</button>
+
+  <script>
+    let counter = 0;
+
+    const circle = document.getElementById('circle');
+    const counterDisplay = document.getElementById('counter');
+    const resetButton = document.getElementById('resetButton');
+
+    // Increment counter when the circle is clicked
+    circle.addEventListener('click', () => {
+      counter++;
+      counterDisplay.textContent = counter;
+    });
+
+    // Reset counter when the reset button is clicked
+    resetButton.addEventListener('click', () => {
+      counter = 0;
+      counterDisplay.textContent = counter;
+    });
+
 
     <script src="lab8.js"></script>
 </body>
