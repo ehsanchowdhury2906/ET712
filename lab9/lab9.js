@@ -1,15 +1,15 @@
 console.log("ehsan chowdhury")
-// example 1 
-// collect the element 
-let btnscrollby = document.querySelector("btnscrollby")
-btnscrollby.addEventListener("click",function(){
+// example 1
+// collect the element
+let btnscrollby = document.querySelector(".btnscrollby")
+btnscrollby.addEventListener("click", function(){
     window.scrollBy(100,0)
 })
 
 /**
  * example 2
  */
-// collect the elements 
+// collect the elements
 let btnright = document.querySelector(".btnright")
 let btnleft = document.querySelector(".btnleft")
 
@@ -19,30 +19,30 @@ function scrollgallery(pexels){
     gallerycontainer.scrollBy({
         left:pexels,
         behavior: "smooth"
-   })  
+    })
 }
 
 // add a click event to each buttons
 btnright.addEventListener("click", function(){
     scrollgallery(600)
-})
+}) 
 
 btnleft.addEventListener("click", function(){
     scrollgallery(-600)
 })
 
 /**
- * example 3 
+ * example 3
  */
-let topcontainer = document.querySelector(".topcontainer")
+let topcontainer =  document.querySelector(".topcontainer")
 
 window.addEventListener("scroll", function(){
-    let pxTop = window.screenY
+    let pxTop = window.scrollY 
     console.log(pxTop)
-    if(pxTop>80){
-        topcontainer.Style.display = "block"
+    if(pxTop>100){
+        topcontainer.style.display = "block"
     }
     else{
-        topcontainer.style.display = "none"
+         topcontainer.style.display = "none"
     }
 })
