@@ -1,0 +1,67 @@
+*{box-sizing: border-box;}
+#content{
+    width: 2000px;
+    padding: 1em;
+    background-color: chocolate;
+}
+
+img{width: 100%; display: block;}
+.maincontainer, .gallerycontainer{
+    width: 500px;
+    margin: auto;
+}
+.maincontainer{
+    position: relative;
+    z-index: 0;
+}
+.gallerycontainer{
+    position: relative;
+    z-index: 1;
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+.galleryimg{
+    display: inline-block;
+}
+.btnright, .btnleft{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border: none;
+    background-color: rgba(200,200,200,0.6);
+}
+.btnright{
+    right: 0%;
+}
+.btnleft{
+    left: 0%;
+}
+.btnright:hover, .btnleft:hover{
+    background-color: rgba(200,200,200,0.9);
+    color: brown;
+}
+html{scroll-behavior: smooth;}
+.topcontainer{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(200,200,200,0.6);
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+}
+.toplink{
+    color: black;
+    padding-top: 1em;
+    display: block;
+    text-decoration: none;
+}
+.toplink:hover{
+    color: brown;
+    font-weight: bolder;
+}
