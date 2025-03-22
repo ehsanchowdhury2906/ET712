@@ -55,170 +55,194 @@
 </body>
 </html>
 
-<h3>Exercise 2</h3>
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-    .gallery-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      width: 80%;
-    }
-    .card-gallery {
-      display: flex;
-      transition: transform 0.3s ease;
-    }
-    .card {
-      background-color: #fff;
-      border-radius: 8px;
-      margin: 0 10px;
-      width: 200px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .card h3 {
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
-    .card p {
-      padding: 0 10px;
-      font-size: 0.9em;
-      color: #666;
-    }
-    .card a {
-      display: block;
-      margin: 10px 0;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .card a:hover {
-      text-decoration: underline;
-    }
-    .nav-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-    .nav-buttons button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      border-radius: 50%;
-      font-size: 18px;
-    }
-    .nav-buttons button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Gallery</title>
+    <style>
+        /* Centering and basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Container holding the gallery */
+        .gallery-container {
+            position: relative;
+            width: 80%; /* Set width to 80% for more space */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The sliding gallery */
+        .card-gallery {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual card styling */
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 0 20px; /* Add margin between cards */
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+            padding: 0 10px;
+        }
+
+        .card a {
+            display: block;
+            margin: 10px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation buttons */
+        .nav-buttons {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+
+        .nav-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+    </style>
 </head>
 <body>
-  <div class="gallery-container">
-    <div class="card-gallery">
-      <!-- Card 1 -->
-      <div class="card">
-        <img src="https://via.placeholder.com/200x150" alt="Image 1">
-        <h3>Card 1</h3>
-        <p>This is a description of card 1.</p>
-        <a href="#">Learn more</a>
-      </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <img src="https://via.placeholder.com/200x150" alt="Image 2">
-        <h3>Card 2</h3>
-        <p>This is a description of card 2.</p>
-        <a href="#">Learn more</a>
-      </div>
-      <!-- Card 3 -->
-      <div class="card">
-        <img src="https://via.placeholder.com/200x150" alt="Image 3">
-        <h3>Card 3</h3>
-        <p>This is a description of card 3.</p>
-        <a href="#">Learn more</a>
-      </div>
-      <!-- Card 4 -->
-      <div class="card">
-        <img src="https://via.placeholder.com/200x150" alt="Image 4">
-        <h3>Card 4</h3>
-        <p>This is a description of card 4.</p>
-        <a href="#">Learn more</a>
-      </div>
-      <!-- Card 5 -->
-      <div class="card">
-        <img src="https://via.placeholder.com/200x150" alt="Image 5">
-        <h3>Card 5</h3>
-        <p>This is a description of card 5.</p>
-        <a href="#">Learn more</a>
-      </div>
-      <!-- Card 6 -->
-      <div class="card">
-        <img src="https://via.placeholder.com/200x150" alt="Image 6">
-        <h3>Card 6</h3>
-        <p>This is a description of card 6.</p>
-        <a href="#">Learn more</a>
-      </div>
+
+    <div class="gallery-container">
+        <!-- Left navigation button -->
+        <div class="nav-buttons">
+            <button id="prevBtn">&#10094;</button>
+        </div>
+
+        <!-- Gallery Wrapper -->
+        <div class="card-gallery" id="gallery">
+            <!-- Manually adding 6 cards -->
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Image 1">
+                <h3>Card 1</h3>
+                <p>This is a description of card 1.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Image 2">
+                <h3>Card 2</h3>
+                <p>This is a description of card 2.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Image 3">
+                <h3>Card 3</h3>
+                <p>This is a description of card 3.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Image 4">
+                <h3>Card 4</h3>
+                <p>This is a description of card 4.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Image 5">
+                <h3>Card 5</h3>
+                <p>This is a description of card 5.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/200x150" alt="Image 6">
+                <h3>Card 6</h3>
+                <p>This is a description of card 6.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+
+        <!-- Right navigation button -->
+        <div class="nav-buttons">
+            <button id="nextBtn">&#10095;</button>
+        </div>
     </div>
-    <!-- Navigation buttons -->
-    <div class="nav-buttons">
-      <button id="prevBtn">&#10094;</button>
-      <button id="nextBtn">&#10095;</button>
-    </div>
-  </div>
 
-  <script>
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const gallery = document.querySelector('.card-gallery');
-    const totalCards = 6;
-    const cardsToShow = 3;
-    let currentIndex = 0;
+    <script>
+        let index = 0; // Controls the starting position
+        let gallery = document.getElementById("gallery");
 
-    // Update gallery transform based on current index
-    function updateGalleryPosition() {
-      gallery.style.transform = `translateX(-${(currentIndex * (100 / cardsToShow))}%)`;
-    }
+        // Function to display only 3 cards at a time
+        function displayCards() {
+            let cards = document.querySelectorAll(".card");
+            cards.forEach((card, i) => {
+                card.style.display = (i >= index && i < index + 3) ? 'block' : 'none';
+            });
+        }
 
-    // Handle Next Button Click
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < totalCards - cardsToShow) {
-        currentIndex++;
-      } else {
-        currentIndex = 0; // Loop back to the first set of cards
-      }
-      updateGalleryPosition();
-    });
+        // Function to shift the gallery forward
+        function nextSlide() {
+            index = (index + 3) % 6; // Move forward and loop back to start
+            displayCards();
+        }
 
-    // Handle Previous Button Click
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = totalCards - cardsToShow; // Loop back to the last set of cards
-      }
-      updateGalleryPosition();
-    });
+        // Function to shift the gallery backward
+        function prevSlide() {
+            index = (index - 3 + 6) % 6; // Move backward and loop to the end
+            displayCards();
+        }
 
-    // Initial setup
-    updateGalleryPosition();
-  </script>
+        // Add event listeners to buttons
+        document.getElementById("nextBtn").addEventListener("click", nextSlide);
+        document.getElementById("prevBtn").addEventListener("click", prevSlide);
+
+        // Display initial set of cards on page load
+        window.onload = displayCards;
+
+    </script>
+
 </body>
 </html>
