@@ -23,7 +23,7 @@
 <body>
     <div class="slider-container">
         <!-- Images -->
-        <img class="slider-images active" src="car.jpg" alt="Car Image">
+        <img class="slider-images active" src="https://images.unsplash.com/photo-1586458873452-7bdd7401eabd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG95JTIwcm9ib3R8ZW58MHx8MHx8fDA%3D" alt="Car Image">
         <img class="slider-images" src="robot.jpg" alt="Robot Image">
         
         <!-- Buttons -->
