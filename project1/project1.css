@@ -1,1 +1,17 @@
-
+.shape, .rectangle{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin-bottom: 3em;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+}
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
