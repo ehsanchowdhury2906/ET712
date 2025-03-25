@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Image Slider</title>
+    <title>testing slider</title>
     <style>
         .slider-container {
             width: 100%;
