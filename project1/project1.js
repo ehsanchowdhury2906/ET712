@@ -3,63 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <title>Basic Image Slider</title>
     <style>
         .slider-container {
             width: 100%;
             max-width: 500px;
             margin: auto;
-            overflow: hidden;
             position: relative;
-        }
-        .slider-wrapper {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
         }
         .slider-images {
             width: 100%;
-            height: auto;
+            display: none;
+        }
+        .slider-images.active {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="slider-container">
-        <div class="slider-wrapper">
-            <img class="slider-images" src="car.jpg" alt="Car Image">
-            <img class="slider-images" src="robot.jpg" alt="Robot Image">
-        </div>
+        <!-- Images -->
+        <img class="slider-images active" src="car.jpg" alt="Car Image">
+        <img class="slider-images" src="robot.jpg" alt="Robot Image">
+        
+        <!-- Buttons -->
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
     </div>
 
     <script>
-        const sliderWrapper = document.querySelector('.slider-wrapper');
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
+        let currentIndex = 0; // Start on the first image
+        const images = document.querySelectorAll('.slider-images');
 
-        // When the mouse is down, start the dragging
-        sliderWrapper.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.pageX - sliderWrapper.offsetLeft;
-            scrollLeft = sliderWrapper.scrollLeft;
+        // Function to show the image based on the currentIndex
+        function showImage() {
+            // Hide all images
+            images.forEach(image => image.classList.remove('active'));
+            // Show the current image
+            images[currentIndex].classList.add('active');
+        }
+
+        // Previous button click event
+        document.getElementById('prevBtn').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the last image
+            showImage();
         });
 
-        // When the mouse moves, drag the images
-        sliderWrapper.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - sliderWrapper.offsetLeft;
-            const walk = (x - startX) * 2;  // The '2' controls the speed of the sliding
-            sliderWrapper.style.transform = `translateX(${scrollLeft - walk}px)`;
-        });
-
-        // When the mouse is released, stop dragging
-        sliderWrapper.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        // If the mouse leaves the slider, also stop dragging
-        sliderWrapper.addEventListener('mouseleave', () => {
-            isDragging = false;
+        // Next button click event
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop to the first image
+            showImage();
         });
     </script>
 </body>
