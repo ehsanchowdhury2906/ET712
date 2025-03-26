@@ -15,5 +15,3 @@ robtBtn.addEventListener("click", function(){
     scrollgallery(-1200)
 })
         }
-
- 
