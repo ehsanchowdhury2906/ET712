@@ -16,11 +16,4 @@ robtBtn.addEventListener("click", function(){
 })
         }
 
-  document.getElementById('robtBtn').addEventListener('click', function() {
-     currentIndex = (currentIndex - 1 + images.length) % images.length; 
-        showImage();
-        });
-
- document.getElementById('carbtn').addEventListener('click', function() {
-   currentIndex = (currentIndex + 1) % images.length; 
-      showImage();
+ 
