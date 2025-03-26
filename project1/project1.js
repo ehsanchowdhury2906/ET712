@@ -1,4 +1,4 @@
-    let carbtn = document.querySelector(".carbtn")
+let carbtn = document.querySelector(".carbtn")
 let robtBtn = document.querySelector(".robtBtn")
 function scrollgallery(pexels){
     let gallerycontainer = document.querySelector(".gallerycontainer")
