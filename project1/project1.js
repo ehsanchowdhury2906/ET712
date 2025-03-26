@@ -9,10 +9,10 @@ function scrollgallery(pexels){
 }
 
 carbtn.addEventListener("click", function(){
-    scrollgallery(500)
+    scrollgallery(1200)
 })
 robtBtn.addEventListener("click", function(){
-    scrollgallery(-500)
+    scrollgallery(-1200)
 })
         }
 
