@@ -14,4 +14,3 @@ carbtn.addEventListener("click", function(){
 robtBtn.addEventListener("click", function(){
     scrollgallery(-1200)
 })
-        }
