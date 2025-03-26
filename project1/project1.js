@@ -1,20 +1,26 @@
-       let currentIndex = 0; 
-        const images = document.querySelectorAll('.slider-images');
+    let carbtn = document.querySelector(".carbtn")
+let robtBtn = document.querySelector(".robtBtn")
+function scrollgallery(pexels){
+    let gallerycontainer = document.querySelector(".gallerycontainer")
+    gallerycontainer.scrollBy({
+        left:pexels,
+        behavior:"smooth"
+    })
+}
 
-        
-        function showImage() {
-        
-            images.forEach(image => image.classList.remove('active'));
-            
-            images[currentIndex].classList.add('active');
+carbtn.addEventListener("click", function(){
+    scrollgallery(500)
+})
+robtBtn.addEventListener("click", function(){
+    scrollgallery(-500)
+})
         }
 
-        
-        document.getElementById('robtBtn').addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; 
-            showImage();
+  document.getElementById('robtBtn').addEventListener('click', function() {
+     currentIndex = (currentIndex - 1 + images.length) % images.length; 
+        showImage();
         });
 
-        document.getElementById('carbtn').addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % images.length; 
-            showImage();
+ document.getElementById('carbtn').addEventListener('click', function() {
+   currentIndex = (currentIndex + 1) % images.length; 
+      showImage();
