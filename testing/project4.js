@@ -1,4 +1,4 @@
-       let index = 0; // Controls the starting position
+        let index = 0; // Controls the starting position
         let gallery = document.getElementById("gallery");
 
         // Function to display only 3 cards at a time
