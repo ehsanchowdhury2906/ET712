@@ -1,49 +1,90 @@
-*{box-sizing: border-box;}
-#content{
-    width: 2000px;
-    padding: 1em;
-    background-color: chocolate;
-}
+   body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
 
-img{width: 90%; display: block; height: 100%;}
-.maincontainer, .gallerycontainer{
-    width: 600px;
-    height: 800px;
-    margin: auto;
-}
-.maincontainer{
-    position: relative;
-    z-index: 0;
-}
-.gallerycontainer{
-    position: relative;
-    z-index: 1;
-    overflow-x: scroll;
-    white-space: nowrap;
-    overflow-y: hidden;
-}
-.galleryimg{
-    display: inline-block;
-    width: 600px;
-}
-.carbtn, .robtBtn{
-    position: absolute;
-    z-index: 2;
-    top: 40%;
-    font-size: 1.5em;
-    padding: 0.5em;
-    border: none;
-    background-color: rgba(200,200,200,0.6);
-}
-.carbtn{
-    right: 0%;
-}
-.robtBtn{
-    left: 0%;
-}
-.carbtn:hover, .robtBtn:hover{
-    background-color: rgba(200,200,200,0.9);
-    color: crimson;
-}
+        /* Container holding the gallery */
+        .gallery-container {
+            position: relative;
+            width: 80%; /* Set width to 80% for more space */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-html{scroll-behavior: smooth;}
+        /* The sliding gallery */
+        .card-gallery {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual card styling */
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 0 20px; /* Add margin between cards */
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #666;
+            padding: 0 10px;
+        }
+
+        .card a {
+            display: block;
+            margin: 10px 0;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation buttons */
+        .nav-buttons {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+
+        .nav-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
