@@ -1,5 +1,4 @@
-<script>
-    let index = 0; // Controls the starting position
+let index = 0; // Controls the starting position
 
     // Function to display only 3 cards at a time
     function displayCards() {
@@ -49,4 +48,3 @@
         if (nextBtn) nextBtn.addEventListener("click", nextSlide);
         if (prevBtn) prevBtn.addEventListener("click", prevSlide);
     };
-</script>
