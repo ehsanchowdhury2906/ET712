@@ -1,6 +1,6 @@
-let index = 0; // Controls the starting position
+window.onload = function () {
+    let index = 0;
 
-    // Function to display only 3 cards at a time
     function displayCards() {
         let cards = document.querySelectorAll(".card");
         let totalCards = cards.length;
@@ -10,7 +10,6 @@ let index = 0; // Controls the starting position
         });
     }
 
-    // Function to shift the gallery forward
     function nextSlide() {
         let cards = document.querySelectorAll(".card");
         let totalCards = cards.length;
@@ -24,7 +23,6 @@ let index = 0; // Controls the starting position
         displayCards();
     }
 
-    // Function to shift the gallery backward
     function prevSlide() {
         let cards = document.querySelectorAll(".card");
         let totalCards = cards.length;
@@ -38,13 +36,11 @@ let index = 0; // Controls the starting position
         displayCards();
     }
 
-    // Add event listeners to buttons only if they exist
-    window.onload = function () {
-        displayCards();
+    let nextBtn = document.getElementById("nextBtn");
+    let prevBtn = document.getElementById("prevBtn");
 
-        let nextBtn = document.getElementById("nextBtn");
-        let prevBtn = document.getElementById("prevBtn");
+    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
 
-        if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-        if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-    };
+    displayCards();
+};
