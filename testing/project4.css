@@ -1,90 +1,96 @@
-         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
 
-        /* Container holding the gallery */
-        .gallery-container {
-            position: relative;
-            width: 80%; /* Set width to 80% for more space */
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/* Container holding the gallery */
+.gallery-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* The sliding gallery */
-        .card-gallery {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+/* The sliding gallery */
+.card-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
 
-        /* Individual card styling */
-        .card {
-            background-color: #fff;
-            border-radius: 8px;
-            margin: 0 20px; /* Add margin between cards */
-            width: 200px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            padding: 15px;
-        }
+/* Individual card styling */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 10px; /* Reduced margin for better spacing */
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    display: none; /* Only 3 will be displayed at a time */
+}
 
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-bottom: 2px solid #ddd;
-        }
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
 
-        .card h3 {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
 
-        .card p {
-            font-size: 0.9em;
-            color: #666;
-            padding: 0 10px;
-        }
+.card p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 10px;
+}
 
-        .card a {
-            display: block;
-            margin: 10px 0;
-            color: #007bff;
-            text-decoration: none;
-        }
+.card a {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
 
-        .card a:hover {
-            text-decoration: underline;
-        }
+.card a:hover {
+    text-decoration: underline;
+}
 
-        /* Navigation buttons */
-        .nav-buttons {
-            position: absolute;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            top: 50%;
-        }
+/* Navigation buttons */
+.nav-buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Prevents blocking interactions */
+}
 
-        .nav-buttons button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 18px;
-        }
+.nav-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    pointer-events: all; /* Re-enables button clicking */
+}
 
-        .nav-buttons button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+.nav-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
