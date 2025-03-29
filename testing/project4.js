@@ -1,37 +1,17 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
+// Function to navigate to a new page when clicking a card
+function navigateTo(page) {
+    window.location.href = page;
 }
 
-/* Outer container to center everything */
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh; /* Ensure full height centering */
-}
+// Ensure the page loads with four cards displayed
+document.addEventListener("DOMContentLoaded", function () {
+    let cards = document.querySelectorAll(".card");
 
-/* Center the gallery itself */
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Stack elements if needed */
-    width: 80%;
-    max-width: 900px;
-    padding: 20px;
-}
-
-/* Use grid for even spacing and centering */
-.card-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Ensure 4 cards in one row */
-    gap: 20px;
-    justify-content: center;
-    align-items
+    // Add click event listener to each card
+    cards.forEach(card => {
+        card.addEventListener("click", function () {
+            let pageName = this.querySelector("h3").textContent.toLowerCase() + ".html";
+            navigateTo(pageName);
+        });
+    });
+});
