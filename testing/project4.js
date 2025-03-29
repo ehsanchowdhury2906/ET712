@@ -1,46 +1,65 @@
-window.onload = function () {
-    let index = 0;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
 
-    function displayCards() {
-        let cards = document.querySelectorAll(".card");
-        let totalCards = cards.length;
+/* Container holding the gallery */
+.gallery-container {
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        cards.forEach((card, i) => {
-            card.style.display = (i >= index && i < index + 3) ? 'block' : 'none';
-        });
-    }
+/* The card gallery */
+.card-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-    function nextSlide() {
-        let cards = document.querySelectorAll(".card");
-        let totalCards = cards.length;
-        
-        if (index + 3 < totalCards) {
-            index += 3;
-        } else {
-            index = 0; // Loop back to the start
-        }
+/* Individual card styling */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    
+    /* Make the entire card clickable */
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 
-        displayCards();
-    }
+.card:hover {
+    transform: scale(1.05);
+}
 
-    function prevSlide() {
-        let cards = document.querySelectorAll(".card");
-        let totalCards = cards.length;
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
 
-        if (index - 3 >= 0) {
-            index -= 3;
-        } else {
-            index = Math.max(0, totalCards - (totalCards % 3 || 3)); // Loop to the last set
-        }
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
 
-        displayCards();
-    }
-
-    let nextBtn = document.getElementById("nextBtn");
-    let prevBtn = document.getElementById("prevBtn");
-
-    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-
-    displayCards();
-};
+.card p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 10px;
+}
