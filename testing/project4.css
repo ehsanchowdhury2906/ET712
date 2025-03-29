@@ -1,96 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-}
-
-/* Container holding the gallery */
-.gallery-container {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* The sliding gallery */
+/* The card gallery */
 .card-gallery {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 4 cards per row */
+    gap: 20px;
     justify-content: center;
-    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
 }
 
 /* Individual card styling */
 .card {
     background-color: #fff;
     border-radius: 8px;
-    margin: 0 10px; /* Reduced margin for better spacing */
     width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     text-align: center;
     padding: 15px;
-    display: none; /* Only 3 will be displayed at a time */
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-.card h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 0.9em;
-    color: #666;
-    padding: 0 10px;
-}
-
-.card a {
-    display: block;
-    margin: 10px 0;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.card a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation buttons */
-.nav-buttons {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none; /* Prevents blocking interactions */
-}
-
-.nav-buttons button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    pointer-events: all; /* Re-enables button clicking */
+    transition: transform 0.3s ease-in-out;
+
+    /* Make the entire card clickable */
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
-.nav-buttons button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.card:hover {
+    transform: scale(1.05);
 }
