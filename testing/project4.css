@@ -8,27 +8,32 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Center the gallery container */
-.gallery-container {
+/* Outer container to center everything */
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
-    padding: 20px;
+    height: 100vh; /* Full height for vertical centering */
 }
 
-/* Use a grid to align four cards per row */
+/* Center the gallery */
+.gallery-container {
+    width: 80%;
+    max-width: 900px;
+    margin: auto; /* Ensures horizontal centering */
+    text-align: center; /* Centers text inside */
+}
+
+/* Grid for 4 cards per row */
 .card-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards in one row */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
     gap: 20px;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-/* Individual card styling */
+/* Card styling */
 .card {
     background-color: #fff;
     border-radius: 8px;
@@ -37,9 +42,6 @@ body {
     padding: 15px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-
-    /* Make the entire card clickable */
-    display: block;
     text-decoration: none;
     color: inherit;
 }
@@ -63,5 +65,4 @@ body {
 .card p {
     font-size: 0.9em;
     color: #666;
-    padding: 0 10px;
 }
