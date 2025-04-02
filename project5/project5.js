@@ -63,3 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
         loadColor();
     }
 });
+
+// Numbers quiz logic
+function checkAnswer(answer) {
+    let feedback = document.getElementById("feedback");
+    if (answer === 2) {
+        feedback.textContent = "Correct! 🎉";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Try again! ❌";
+        feedback.style.color = "red";
+    }
+}
