@@ -6,7 +6,7 @@
     <title>Numbers Quiz</title>
     <link rel="stylesheet" href="project5.css">
 </head>
-<body data-page="numbers">
+<body>
 
     <div class="main-container">
         <h1>Welcome to the Numbers Section!</h1>
@@ -16,10 +16,10 @@
             <p id="question">1 + 1 = ?</p>
 
             <div class="options">
-                <button onclick="checkAnswer(1)">1</button>
-                <button onclick="checkAnswer(2)">2</button>
-                <button onclick="checkAnswer(3)">3</button>
-                <button onclick="checkAnswer(4)">4</button>
+                <button class="answer-btn" data-answer="1">1</button>
+                <button class="answer-btn" data-answer="2">2</button>
+                <button class="answer-btn" data-answer="3">3</button>
+                <button class="answer-btn" data-answer="4">4</button>
             </div>
 
             <p id="feedback"></p>
@@ -28,7 +28,30 @@
         <button onclick="window.location.href='index.html'">Back to Home</button>
     </div>
 
-    <script src="project5.js"></script>
+    <script>
+        // Ensure script runs after DOM is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            let buttons = document.querySelectorAll(".answer-btn");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let selectedAnswer = parseInt(this.getAttribute("data-answer"));
+                    checkAnswer(selectedAnswer);
+                });
+            });
+        });
+
+        function checkAnswer(answer) {
+            let feedback = document.getElementById("feedback");
+            if (answer === 2) {
+                feedback.textContent = "Correct! 🎉";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = "Try again! ❌";
+                feedback.style.color = "red";
+            }
+        }
+    </script>
 
 </body>
 </html>
