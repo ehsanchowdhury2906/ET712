@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Color Quiz Logic (Merged from colors.js)
+// Color Quiz Logic (for the color part)
 const colors = [
     { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
     { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
