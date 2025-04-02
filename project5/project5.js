@@ -75,3 +75,30 @@ function checkAnswer(answer) {
         feedback.style.color = "red";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let animalData = [
+        { image: "https://via.placeholder.com/300x200?text=Lion", correctFood: "meat" },
+        { image: "https://via.placeholder.com/300x200?text=Cow", correctFood: "grass" },
+        { image: "https://via.placeholder.com/300x200?text=Penguin", correctFood: "fish" },
+        { image: "https://via.placeholder.com/300x200?text=Monkey", correctFood: "fruits" }
+    ];
+
+    let currentAnimal = Math.floor(Math.random() * animalData.length);
+    document.getElementById("animal-image").src = animalData[currentAnimal].image;
+
+    document.querySelectorAll(".answer-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let selectedFood = this.getAttribute("data-answer");
+            let feedback = document.getElementById("feedback");
+
+            if (selectedFood === animalData[currentAnimal].correctFood) {
+                feedback.textContent = "Correct! 🎉";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = "Try again! ❌";
+                feedback.style.color = "red";
+            }
+        });
+    });
+});
