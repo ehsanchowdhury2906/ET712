@@ -2,16 +2,15 @@ function navigateTo(page) {
     window.location.href = page;
 }
 
-// Navigation: Redirect users when they click a card
+// Ensure the page loads with four cards displayed
 document.addEventListener("DOMContentLoaded", function () {
     let cards = document.querySelectorAll(".card");
 
+    // Add click event listener to each card
     cards.forEach(card => {
         card.addEventListener("click", function () {
-            let section = this.getAttribute("data-section");
-            if (section) {
-                window.location.href = section + ".html"; // Redirect to the correct page
-            }
+            let pageName = this.querySelector("h3").textContent.toLowerCase() + ".html";
+            navigateTo(pageName);
         });
     });
 });
