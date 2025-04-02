@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.addEventListener("click", function () {
             let section = this.getAttribute("data-section");
             if (section) {
-                window.location.href = section + ".html";
+                window.location.href = section + ".html"; // Redirect to the correct page
             }
         });
     });
