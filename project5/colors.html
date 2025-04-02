@@ -6,24 +6,23 @@
     <title>Colors</title>
     <link rel="stylesheet" href="project5.css">
 </head>
-<body>
-    </head>
-<body>
-    <h1><center>Hello kids are you excited to learn about your colors?</center></h1>
-    <h2><center>what colors are these?</center></h2>
-     
-   
-    <section class="maincontainer">
-        <div class="gallerycontainer">
-            <img class="galleryimg" src="">
-            <img class="galleryimg" src="">  
-        </div>
+<body data-page="colors">
 
     <div class="main-container">
         <h1>Welcome to the Colors Section</h1>
-        <p>Learn about different colors here.</p>
+        <p>Which color is which? Type the correct color name.</p>
+
+        <div class="quiz-container">
+            <img id="colorImage" src="" alt="Color to guess">
+            <input type="text" id="colorInput" placeholder="Enter color name">
+            <button onclick="checkAnswer()">Submit</button>
+            <p id="feedback"></p>
+        </div>
+
         <button onclick="window.location.href='project5.html'">Back to Home</button>
     </div>
+
+    <script src="project5.js"></script>
 
 </body>
 </html>
