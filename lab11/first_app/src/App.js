@@ -8,7 +8,7 @@ function App() {
   }
   return (
     <div>
-      <h1 style={{color:"magenta", textAlign:"center"}}>Eldon Wu</h1>
+      <h1 style={{color:"magenta", textAlign:"center"}}>Ehsan chowdhury</h1>
       <p>This is my first ReactJS app</p>
       <p>Bucket List</p>
       <ol>
