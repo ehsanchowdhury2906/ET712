@@ -1,9 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './App.css';
+import kaabaimg from'./';
 
 function App() {
-  return (
-    <div className="App">
+  const msg = "Welcome to ReactJS"
+    function printSomething(){
+      return "something"
+    }
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
