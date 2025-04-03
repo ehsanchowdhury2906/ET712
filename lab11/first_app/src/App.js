@@ -1,5 +1,5 @@
 import './App.css';
-import kaabaimg from'./images/pexels-khaled-al-kayali-517658582-31339194.jpg'
+import cupcakeimg from'.https://img.freepik.com/free-vector/cupcake-with-white-cream-topping_1308-107342.jpg'
 
 function App() {
   const msg = "Welcome to ReactJS"
