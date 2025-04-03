@@ -102,3 +102,45 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector("#shape-image")) {
+        let shapesData = [
+            { image: "https://via.placeholder.com/200x200?text=Circle", answer: "circle" },
+            { image: "https://via.placeholder.com/200x200?text=Square", answer: "square" },
+            { image: "https://via.placeholder.com/300x200?text=Rectangle", answer: "rectangle" }
+        ];
+
+        let currentShapeIndex = 0;
+        let shapeImage = document.getElementById("shape-image");
+        let shapeInput = document.getElementById("shape-input");
+        let submitButton = document.getElementById("submit-answer");
+        let shapeFeedback = document.getElementById("shape-feedback");
+
+        function loadShape() {
+            shapeImage.src = shapesData[currentShapeIndex].image;
+            shapeInput.value = "";
+            shapeFeedback.textContent = "";
+        }
+
+        submitButton.addEventListener("click", function () {
+            let userAnswer = shapeInput.value.trim().toLowerCase();
+            if (userAnswer === shapesData[currentShapeIndex].answer) {
+                shapeFeedback.textContent = "Correct! 🎉";
+                shapeFeedback.style.color = "green";
+                currentShapeIndex++;
+
+                if (currentShapeIndex < shapesData.length) {
+                    setTimeout(loadShape, 1000); // Load next shape after 1 second
+                } else {
+                    shapeFeedback.textContent = "Great job! You guessed all shapes! 🎉";
+                }
+            } else {
+                shapeFeedback.textContent = "Try again! ❌";
+                shapeFeedback.style.color = "red";
+            }
+        });
+
+        loadShape(); // Load the first shape on page load
+    }
+});
