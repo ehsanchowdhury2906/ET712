@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Quiz</title>
+    <title>Colors Quiz</title>
     <link rel="stylesheet" href="project4.css">
 </head>
-<body data-page="colors">
-    <div class="color-quiz">
-        <h2>Which color is this?</h2>
-        <img id="colorImage" src="" alt="Color to guess">
-        <input type="text" id="colorInput" placeholder="Type the color">
-        <button onclick="checkAnswer()">Submit</button>
-        <p id="feedback"></p>
+<body>
+
+    <div class="main-container">
+        <h1>Welcome to the Colors Section!</h1>
+        <p>Type the name of the color shown in the image.</p>
+
+        <div class="quiz-container">
+            <img id="colorImage" src="" alt="Color to guess">
+            <input type="text" id="colorInput" placeholder="Type the color name">
+            <button onclick="checkAnswer()">Submit</button>
+            <p id="feedback"></p>
         </div>
 
         <!-- Back to Home Button -->
