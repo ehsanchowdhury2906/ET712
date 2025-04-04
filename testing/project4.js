@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("submitBtn").addEventListener("click", checkAnswer);
 
   document.getElementById("homeButton").addEventListener("click", () => {
-    window.location.href = "project5.html";
+    window.location.href = "project4.html";
   });
 });
 
