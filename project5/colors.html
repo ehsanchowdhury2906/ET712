@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colors</title>
-    <link rel="stylesheet" href="project5.css">
+    <title>Colors Quiz</title>
+    <link rel="stylesheet" href="project5.css"> 
 </head>
-<body data-page="colors">
+<body>
 
-    <div class="main-container">
-        <h1>Welcome to the Colors Section</h1>
-        <p>Which color is which? Type the correct color name.</p>
-
-        <div class="quiz-container">
-            <img id="colorImage" src="" alt="Color to guess">
-            <input type="text" id="colorInput" placeholder="Enter color name">
-            <button onclick="checkAnswer()">Submit</button>
-            <p id="feedback"></p>
+    <div class="quiz-container">
+        <h1>Which Color is This?</h1>
+        <img id="colorImage" alt="Color to guess">
+        <div>
+            <input id="colorInput" type="text" placeholder="Type the color here">
         </div>
-
-        <button onclick="window.location.href='project5.html'">Back to Home</button>
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="feedback"></p>
     </div>
 
     <script src="project5.js"></script>
-
 </body>
 </html>
