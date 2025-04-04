@@ -38,13 +38,14 @@ function checkAnswer() {
   if (!input || !feedback) return;
 
   const userAnswer = input.value.trim().toLowerCase();
-  const correctAnswer = colors[currentColorIndex].name.toLowerCase();
+  const correctAnswer = colors[currentColorIndex].name;
 
   if (userAnswer === correctAnswer) {
     feedback.textContent = "Correct! 🎉";
     feedback.style.color = "green";
 
     currentColorIndex = (currentColorIndex + 1) % colors.length;
+
     setTimeout(() => {
       input.value = "";
       feedback.textContent = "";
@@ -59,19 +60,12 @@ function checkAnswer() {
 document.addEventListener("DOMContentLoaded", () => {
   loadColor();
 
-  const submitBtn = document.getElementById("submitBtn");
-  if (submitBtn) {
-    submitBtn.addEventListener("click", checkAnswer);
-  }
+  document.getElementById("submitBtn").addEventListener("click", checkAnswer);
 
-  const homeBtn = document.getElementById("homeButton");
-  if (homeBtn) {
-    homeBtn.addEventListener("click", () => {
-      window.location.href = "project4.html";
-    });
-  }
+  document.getElementById("homeButton").addEventListener("click", () => {
+    window.location.href = "project5.html";
+  });
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
