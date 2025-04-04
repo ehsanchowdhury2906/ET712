@@ -40,6 +40,9 @@ function checkAnswer() {
         const userAnswer = colorInput.value.trim().toLowerCase();
         const correctAnswer = colors[currentColorIndex].name.toLowerCase();
 
+        console.log("User Answer:", userAnswer); // DEBUG LINE
+        console.log("Correct Answer:", correctAnswer); // DEBUG LINE
+
         if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! 🎉";
             feedback.style.color = "green";
@@ -61,6 +64,8 @@ function checkAnswer() {
 document.addEventListener("DOMContentLoaded", function () {
     loadColor();
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let animalData = [
