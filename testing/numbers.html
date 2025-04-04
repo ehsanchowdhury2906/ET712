@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numbers Quiz</title>
-    <link rel="stylesheet" href="project5.css">
-    <style>
-        body {
-            background: url("numbers-background.jpg") no-repeat center center fixed;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="project4.css">
 </head>
 <body>
-    <!-- Page Content -->
+
+    <div class="main-container">
+        <h1>Welcome to the Numbers Section!</h1>
+        <p>Answer the math questions below by selecting the correct number.</p>
+
+        <div class="quiz-container">
+            <p id="question">1 + 1 = ?</p>
+
+            <div class="options">
+                <button class="answer-btn" data-answer="1">1</button>
+                <button class="answer-btn" data-answer="2">2</button>
+                <button class="answer-btn" data-answer="3">3</button>
+                <button class="answer-btn" data-answer="4">4</button>
+            </div>
+
+            <p id="feedback"></p>
+        </div>
+
+        <button onclick="window.location.href='project5.html'">Back to Home</button>
+    </div>
+
+    <script src="project4.js"></script>
+
 </body>
 </html>
