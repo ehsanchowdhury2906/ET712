@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Color Quiz Logic (for the color part)
 const colors = [
     { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
     { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
@@ -33,24 +32,19 @@ function loadColor() {
 }
 
 function checkAnswer() {
-    const colorInput = document.getElementById("colorInput");
+    const input = document.getElementById("colorInput");
     const feedback = document.getElementById("feedback");
 
-    if (colorInput && feedback) {
-        const userAnswer = colorInput.value.trim().toLowerCase();
-        const correctAnswer = colors[currentColorIndex].name.toLowerCase();
-
-        console.log("User Answer:", userAnswer); // DEBUG LINE
-        console.log("Correct Answer:", correctAnswer); // DEBUG LINE
+    if (input) {
+        const userAnswer = input.value.trim().toLowerCase();
+        const correctAnswer = colors[currentColorIndex].name;
 
         if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! 🎉";
             feedback.style.color = "green";
-
             currentColorIndex = (currentColorIndex + 1) % colors.length;
-
             setTimeout(() => {
-                colorInput.value = "";
+                input.value = "";
                 feedback.textContent = "";
                 loadColor();
             }, 1000);
@@ -60,6 +54,17 @@ function checkAnswer() {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadColor();
+
+    const homeBtn = document.getElementById("homeButton");
+    if (homeBtn) {
+        homeBtn.addEventListener("click", function () {
+            window.location.href = "project4.html";
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     loadColor();
