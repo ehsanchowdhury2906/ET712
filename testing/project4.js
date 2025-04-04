@@ -16,56 +16,62 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const colors = [
-    { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
-    { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
-    { name: "green", src: "https://via.placeholder.com/150/008000/FFFFFF?text=Green" },
-    { name: "yellow", src: "https://via.placeholder.com/150/FFFF00/000000?text=Yellow" }
+  { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
+  { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
+  { name: "green", src: "https://via.placeholder.com/150/008000/FFFFFF?text=Green" },
+  { name: "yellow", src: "https://via.placeholder.com/150/FFFF00/000000?text=Yellow" }
 ];
 
 let currentColorIndex = 0;
 
 function loadColor() {
-    const colorImage = document.getElementById("colorImage");
-    if (colorImage) {
-        colorImage.src = colors[currentColorIndex].src;
-    }
+  const colorImage = document.getElementById("colorImage");
+  if (colorImage) {
+    colorImage.src = colors[currentColorIndex].src;
+  }
 }
 
 function checkAnswer() {
-    const input = document.getElementById("colorInput");
-    const feedback = document.getElementById("feedback");
+  const input = document.getElementById("colorInput");
+  const feedback = document.getElementById("feedback");
 
-    if (input) {
-        const userAnswer = input.value.trim().toLowerCase();
-        const correctAnswer = colors[currentColorIndex].name;
+  if (!input || !feedback) return;
 
-        if (userAnswer === correctAnswer) {
-            feedback.textContent = "Correct! 🎉";
-            feedback.style.color = "green";
+  const userAnswer = input.value.trim().toLowerCase();
+  const correctAnswer = colors[currentColorIndex].name.toLowerCase();
 
-            currentColorIndex = (currentColorIndex + 1) % colors.length;
-            setTimeout(() => {
-                input.value = "";
-                feedback.textContent = "";
-                loadColor();
-            }, 1000);
-        } else {
-            feedback.textContent = "Try again!";
-            feedback.style.color = "red";
-        }
-    }
+  if (userAnswer === correctAnswer) {
+    feedback.textContent = "Correct! 🎉";
+    feedback.style.color = "green";
+
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+    setTimeout(() => {
+      input.value = "";
+      feedback.textContent = "";
+      loadColor();
+    }, 1000);
+  } else {
+    feedback.textContent = "Try again!";
+    feedback.style.color = "red";
+  }
 }
 
-// Wait for page to load
-document.addEventListener("DOMContentLoaded", function () {
-    loadColor();
+document.addEventListener("DOMContentLoaded", () => {
+  loadColor();
 
-    document.getElementById("submitBtn").addEventListener("click", checkAnswer);
+  const submitBtn = document.getElementById("submitBtn");
+  if (submitBtn) {
+    submitBtn.addEventListener("click", checkAnswer);
+  }
 
-    document.getElementById("homeButton").addEventListener("click", function () {
-        window.location.href = "project4.html";
+  const homeBtn = document.getElementById("homeButton");
+  if (homeBtn) {
+    homeBtn.addEventListener("click", () => {
+      window.location.href = "project4.html";
     });
+  }
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
