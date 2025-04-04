@@ -90,65 +90,56 @@ h1, h2 {
 }
 
 body {
-    background-image: url('your-background.jpg'); /* Replace with your actual image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  background-image: url('your-background.jpg'); /* Replace with your background */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .main-container {
-    margin-top: 50px;
+  padding-top: 40px;
 }
 
 .quiz-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #colorImage {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 15px;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
 }
 
 #colorInput {
-    padding: 8px;
-    width: 200px;
-    margin: 10px 0;
+  padding: 8px;
+  width: 200px;
 }
 
 button {
-    padding: 8px 16px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 #feedback {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-#homeButton {
-    background-color: #28a745;
-}
-
-#homeButton:hover {
-    background-color: #218838;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 body {
