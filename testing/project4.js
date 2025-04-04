@@ -42,6 +42,7 @@ function checkAnswer() {
         if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! 🎉";
             feedback.style.color = "green";
+
             currentColorIndex = (currentColorIndex + 1) % colors.length;
             setTimeout(() => {
                 input.value = "";
@@ -55,16 +56,17 @@ function checkAnswer() {
     }
 }
 
+// Wait for page to load
 document.addEventListener("DOMContentLoaded", function () {
     loadColor();
 
-    const homeBtn = document.getElementById("homeButton");
-    if (homeBtn) {
-        homeBtn.addEventListener("click", function () {
-            window.location.href = "project4.html";
-        });
-    }
+    document.getElementById("submitBtn").addEventListener("click", checkAnswer);
+
+    document.getElementById("homeButton").addEventListener("click", function () {
+        window.location.href = "project5.html";
+    });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let animalData = [
