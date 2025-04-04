@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Color Quiz Logic (for the color part)
+// Color Quiz Logic
 const colors = [
     { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
     { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
@@ -26,19 +26,19 @@ const colors = [
 let currentColorIndex = 0;
 
 function loadColor() {
-    let colorImage = document.getElementById("colorImage");
+    const colorImage = document.getElementById("colorImage");
     if (colorImage) {
         colorImage.src = colors[currentColorIndex].src;
     }
 }
 
 function checkAnswer() {
-    let colorInput = document.getElementById("colorInput");
-    let feedback = document.getElementById("feedback");
+    const colorInput = document.getElementById("colorInput");
+    const feedback = document.getElementById("feedback");
 
-    if (colorInput) {
-        let userAnswer = colorInput.value.toLowerCase();
-        let correctAnswer = colors[currentColorIndex].name;
+    if (colorInput && feedback) {
+        const userAnswer = colorInput.value.trim().toLowerCase();
+        const correctAnswer = colors[currentColorIndex].name;
 
         if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! 🎉";
@@ -57,9 +57,8 @@ function checkAnswer() {
     }
 }
 
-// Load color quiz if on the colors page
-document.addEventListener("DOMContentLoaded", function () {
-    if (document.body.getAttribute("data-page") === "colors") {
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("colorImage")) {
         loadColor();
     }
 });
