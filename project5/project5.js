@@ -144,3 +144,25 @@ document.addEventListener("DOMContentLoaded", function () {
         loadShape(); // Load the first shape on page load
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+            let buttons = document.querySelectorAll(".answer-btn");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let selectedAnswer = parseInt(this.getAttribute("data-answer"));
+                    checkAnswer(selectedAnswer);
+                });
+            });
+        });
+
+        function checkAnswer(answer) {
+            let feedback = document.getElementById("feedback");
+            if (answer === 2) {
+                feedback.textContent = "Correct! 🎉";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = "Try again! ❌";
+                feedback.style.color = "red";
+            }
+        }
