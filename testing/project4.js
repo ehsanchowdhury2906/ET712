@@ -158,3 +158,32 @@ function checkAnswer(answer) {
         feedback.style.color = "red";
     }
 }
+
+// Ensure script runs after DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.querySelectorAll(".answer-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            let selectedAnswer = parseInt(this.getAttribute("data-answer"));
+            checkAnswer(selectedAnswer);
+        });
+    });
+
+    // Add functionality to Home Button
+    let homeButton = document.getElementById("homeButton");
+    homeButton.addEventListener("click", function () {
+        window.location.href = "project4.html";
+    });
+});
+
+function checkAnswer(answer) {
+    let feedback = document.getElementById("feedback");
+    if (answer === 2) {
+        feedback.textContent = "Correct! 🎉";
+        feedback.style.color = "green";
+    } else {
+        feedback.textContent = "Try again! ❌";
+        feedback.style.color = "red";
+    }
+}
