@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Color Quiz Logic
+// Color Quiz Logic (for the color part)
 const colors = [
     { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
     { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
@@ -38,13 +38,14 @@ function checkAnswer() {
 
     if (colorInput && feedback) {
         const userAnswer = colorInput.value.trim().toLowerCase();
-        const correctAnswer = colors[currentColorIndex].name;
+        const correctAnswer = colors[currentColorIndex].name.toLowerCase();
 
         if (userAnswer === correctAnswer) {
             feedback.textContent = "Correct! 🎉";
             feedback.style.color = "green";
 
             currentColorIndex = (currentColorIndex + 1) % colors.length;
+
             setTimeout(() => {
                 colorInput.value = "";
                 feedback.textContent = "";
@@ -57,23 +58,9 @@ function checkAnswer() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("colorImage")) {
-        loadColor();
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    loadColor();
 });
-
-// Numbers quiz logic
-function checkAnswer(answer) {
-    let feedback = document.getElementById("feedback");
-    if (answer === 2) {
-        feedback.textContent = "Correct! 🎉";
-        feedback.style.color = "green";
-    } else {
-        feedback.textContent = "Try again! ❌";
-        feedback.style.color = "red";
-    }
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     let animalData = [
