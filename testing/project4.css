@@ -183,3 +183,19 @@ body {
     font-size: 18px;
     margin-top: 10px;
 }
+
+/* Style for the home button */
+#homeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#homeButton:hover {
+    background-color: #218838;
+}
