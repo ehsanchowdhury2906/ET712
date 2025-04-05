@@ -20,7 +20,7 @@ const colors = [
     { name: "red", src: "https://img.freepik.com/free-vector/red-geometrical-background_1085-125.jpg?semt=ais_hybrid&w=740" },
     { name: "blue", src: "https://st.depositphotos.com/1655708/3785/i/450/depositphotos_37851997-stock-photo-magic-blue-blur-abstract-background.jpg" },
     { name: "green", src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Green.PNG" },
-    { name: "yellow", src: "https://static.vecteezy.com/system/resources/thumbnails/059/069/579/small/abstract-yellow-background-with-waves-and-dots-free-vector.jpg" }
+    { name: "yellow", src: "https://thumb.ac-illust.com/d0/d05b7a0abad7d2b8eb521f0607174baa_t.jpeg" }
 ];
 
 let currentColorIndex = 0;
