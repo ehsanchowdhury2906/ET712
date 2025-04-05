@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Color Quiz Logic (for the color part)
 const colors = [
-    { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
+    { name: "red", src: "https://img.freepik.com/free-vector/red-geometrical-background_1085-125.jpg?semt=ais_hybrid&w=740" },
     { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
     { name: "green", src: "https://via.placeholder.com/150/008000/FFFFFF?text=Green" },
     { name: "yellow", src: "https://via.placeholder.com/150/FFFF00/000000?text=Yellow" }
