@@ -4,8 +4,7 @@ import {useState} from 'react';
 
 function Square({value,  onSquareClick }) {
 
-//const [value, setValue] = useState(null); 
-// click function 
+
 
   return <button className="square" onClick={onSquareClick}>{value}</button>; 
 }
@@ -13,21 +12,21 @@ function Square({value,  onSquareClick }) {
 
 function App() {
 
-  // change state, from X to O 
+  
   const [xIsNext, setXIsNext] = useState(true); 
 
-  //setState
+  
   const [squares, setSquares] = useState(Array(9).fill(null)); 
 
   function handleClick(i) { 
-  //condition to lock the each cell once it's clicked 
+  
     if (squares[i] || calculateWinner(squares)) { 
     return;
     }
     const nextSquares = squares.slice();
-    //nextSquares[i] = "X";
+    
   
-    //condition to change state 
+    
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
@@ -51,7 +50,7 @@ const winner = calculateWinner(squares);
 
   return (
     <div>
-      <h1 className="title">Tic Tac Toe by toni chen</h1>
+      <h1 className="title">Tic Tac Toe by ehsan chowdhury</h1>
       <div className='boardcontainer'>
       <div className="status">{status}</div> 
         <div className="board-row">
@@ -76,8 +75,7 @@ const winner = calculateWinner(squares);
 
 
 
-
-// function to calculate the points for each X and O 
+// finale part
 
 function calculateWinner(squares) { 
  const lines = [ 
