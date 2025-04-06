@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Color Quiz Logic (for the color part)
 const colors = [
-    { name: "red", src: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Red" },
-    { name: "blue", src: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Blue" },
-    { name: "green", src: "https://via.placeholder.com/150/008000/FFFFFF?text=Green" },
-    { name: "yellow", src: "https://via.placeholder.com/150/FFFF00/000000?text=Yellow" }
+    { name: "red", src: "https://img.freepik.com/free-vector/red-geometrical-background_1085-125.jpg?semt=ais_hybrid&w=740" },
+    { name: "blue", src: "https://st.depositphotos.com/1655708/3785/i/450/depositphotos_37851997-stock-photo-magic-blue-blur-abstract-background.jpg" },
+    { name: "green", src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Green.PNG" },
+    { name: "yellow", src: "https://thumb.ac-illust.com/d0/d05b7a0abad7d2b8eb521f0607174baa_t.jpeg" }
 ];
 
 let currentColorIndex = 0;
