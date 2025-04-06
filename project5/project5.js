@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     let animalData = [
-        { image: "https://i.imgflip.com/70525u.jpg?a484368", correctFood: "meat" },
+        { image: "https://media.tenor.com/Tw8FiJa_KWsAAAAe/alpha-wolf.png", correctFood: "meat" },
         { image: "https://via.placeholder.com/300x200?text=Cow", correctFood: "grass" },
         { image: "https://via.placeholder.com/300x200?text=Penguin", correctFood: "fish" },
         { image: "https://via.placeholder.com/300x200?text=Monkey", correctFood: "fruits" }
