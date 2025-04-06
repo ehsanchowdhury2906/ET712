@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector("#shape-image")) {
         let shapesData = [
             { image: "https://img.freepik.com/free-vector/stroke-round-geometric-shape-vector_53876-175080.jpg?semt=ais_hybrid&w=740", answer: "circle" },
-            { image: "https://via.placeholder.com/200x200?text=Square", answer: "square" },
+            { image: "https://img.freepik.com/premium-vector/rose-gold-glowing-square-frame_515038-14771.jpg?semt=ais_hybrid&w=740", answer: "square" },
             { image: "https://via.placeholder.com/300x200?text=Rectangle", answer: "rectangle" }
         ];
 
