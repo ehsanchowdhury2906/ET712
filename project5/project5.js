@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     let animalData = [
         { image: "https://media.tenor.com/Tw8FiJa_KWsAAAAe/alpha-wolf.png", correctFood: "meat" },
-        { image: "https://via.placeholder.com/300x200?text=Cow", correctFood: "grass" },
+        { image: "https://images.freeimages.com/images/large-previews/a8c/cow-1571234.jpg", correctFood: "grass" },
         { image: "https://via.placeholder.com/300x200?text=Penguin", correctFood: "fish" },
         { image: "https://via.placeholder.com/300x200?text=Monkey", correctFood: "fruits" }
     ];
