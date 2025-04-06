@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { image: "https://media.tenor.com/Tw8FiJa_KWsAAAAe/alpha-wolf.png", correctFood: "meat" },
         { image: "https://img.freepik.com/free-psd/beautiful-cow-picture_23-2151840220.jpg?semt=ais_hybrid&w=740", correctFood: "grass" },
         { image: "https://cartoon-clipart.co/amp/images/yogi-bear2.png", correctFood: "fish" },
-        { image: "https://via.placeholder.com/300x200?text=Monkey", correctFood: "fruits" }
+        { image: "https://seeklogo.com/images/D/donkey-kong-logo-4CB584F302-seeklogo.com.png", correctFood: "fruits" }
     ];
 
     let currentAnimal = Math.floor(Math.random() * animalData.length);
