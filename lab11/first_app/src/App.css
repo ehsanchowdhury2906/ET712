@@ -1,0 +1,7 @@
+*{box-sizing: border-box;}
+body{margin: 1rem;}
+.subtitle{
+  color:darkblue;
+  padding-bottom: 10px;
+  border-bottom: solid 1px lightgray;
+}
