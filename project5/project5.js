@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let animalData = [
         { image: "https://media.tenor.com/Tw8FiJa_KWsAAAAe/alpha-wolf.png", correctFood: "meat" },
         { image: "https://img.freepik.com/free-psd/beautiful-cow-picture_23-2151840220.jpg?semt=ais_hybrid&w=740", correctFood: "grass" },
-        { image: "https://static.wikia.nocookie.net/yogibear/images/b/bd/Yogi_Bear_-_Clipart_-_7.png/revision/latest/scale-to-width-down/250?cb=20220627193752", correctFood: "fish" },
+        { image: "https://cartoon-clipart.co/amp/images/yogi-bear2.png", correctFood: "fish" },
         { image: "https://via.placeholder.com/300x200?text=Monkey", correctFood: "fruits" }
     ];
 
