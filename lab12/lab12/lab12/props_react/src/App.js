@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import user from "./comments.js"
 
 function App() {
   return (
