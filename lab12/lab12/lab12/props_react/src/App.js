@@ -1,26 +1,37 @@
-// imported files 
+//import files
 import './App.css';
-import User from "./comments"
+import User from"./comments"
 import "./index.css"
-import Modalwindow from "./modalwindow"
-// import images 
-import cactusicon from "./images/batman_icon.png"
-import facemanicon from "./images/user_icon.png"
-import headsecticon from "./images/woman_icon.png"
-import User_feedback from './feedback';
+import User_feedback from "./feedback"
+import modalwindow from "./modalwindow"
+
+
+//import images
+import cat from "./images/cat.png"
+import chicken from "./images/chicken.png"
+import panda from "./images/panda.png"
 
 function App() {
   return (
-    <>
-      <h1> User Comments</h1>
-      <main className='maincontainer'>
-        <User_feedback><User image={cactusicon} username= "Batman" date="04/01/25" usercomment="Great Job"/></User_feedback>
-        <User_feedback><User image={facemanicon} username= "Clark" date="04/05/25"  usercomment="I need more rest"/></User_feedback>
-        <User_feedback><User image={headsecticon} username= "Harley" date="04/10/25" usercomment="Glad to"/></User_feedback>
-      </main>
+   <>
+   <h1 style={{textAlign:"center"}}>toni chen liang</h1>
+   <main className="maincontainer">
+    < User_feedback><User image={cat} username="Mr. cat" date="04/08/25" usercomment="great job"/></User_feedback>
+    < User_feedback><User image={chicken} username="Mr. chicken" date="04/08/25" usercomment="glad to help"/></User_feedback>
+    < User_feedback><User image={panda} username="Mr. panda" date="04/08/25" usercomment="relax"/></User_feedback>
+
+   </main>
+
+    {/* POST COMMENTS */}
+    <div className="postcomment">
+      <ul className="commentlist"></ul>
+    </div>
 
 
-    </>
+
+
+
+   </>
   );
 }
 
