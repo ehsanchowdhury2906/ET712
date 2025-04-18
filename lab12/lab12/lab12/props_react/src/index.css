@@ -7,7 +7,127 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*{box-sizing: border-box;}
+img{width:100%; display:block;}
+/* -------------comments.js----------------- */
+/*card*/
+
+.card{
+  width:250px;
+  border-radius: 10px;
+  padding: 1em;
+  margin:1em;
+
+  
 }
+
+.content, .metadata, .comment{
+  text-align: center;
+  padding: 1em;
+
+}
+
+.linkauthor{
+  color:darkseagreen;
+  font-weight: 900;
+}
+
+.postdate{
+  font-style: italic;
+  color: gray;
+  font-size: 0.8em;
+}
+
+
+
+
+/*------------App.js------------*/
+.maincontainer{
+  display:flex;
+  justify-content:center;
+}
+
+
+/*feedback,js*/
+.feedbackcontainer{
+  width:300px;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
+  margin: 2%;
+  overflow:hidden;
+}
+
+.content{
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.description{
+  text-align:center;
+  font-style: italic;
+  color: gray;
+}
+
+.cardfooter{
+  background-color:darkcyan;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  margin-top: 2rem;
+}
+
+.feedbackcontainer:hover{
+  box-shadow: none;
+  border: solid 3px gray;
+}
+
+/* modalwindow.js*/
+.modalwindow{
+  background-color:rgba(50, 50, 50, 0.6);
+  position: fixed;
+  inset: 0% 0% 0% 0%;
+  display:none;
+}
+
+.modalcontent{
+  background-color: white;
+  width:500px;
+  margin: 5em auto;
+  padding:10px;
+}
+
+.modalheader{
+  display:flex;
+  text-align:center;
+  /*border-bottom: gray solid 1px;*/
+  color: darkcyan;
+}
+
+.modalheader p:nth-child(1){width: 90%;}
+.commentarea{width: 100%; height:3em;}
+
+.btnpostfeedback{
+  width: 100%;
+  background-color:darkcyan;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  }
+
+.btnpostfeedback:hover, .closemodal:hover{
+  background-color:crimson;
+  font-weight:bolder;
+  cursor: pointer;
+}
+
+/* POST COMMENTS */
+.postcomment{
+  display: block;
+  width: 1200px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(200,200,200,0.5);
+  }
+  
