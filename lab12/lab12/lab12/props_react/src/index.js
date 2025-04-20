@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import bati from "./images/bati.png";
-import musi from "./images/musi.png";
-import musia from "./images/musia.png";
+import mad from ".images.png"
+import clown from "./2411817_clown_emoji_emoticon_funny_happy_icon"
+import fun from "./2291005_face_fun_funny_joking_smile_icon"
 import './index.css';
 import App from './App';
 import User_feedback from './user_feedback';
@@ -15,13 +15,13 @@ const App = function () {
   <h1 style={{ textAlign: "center" }}>ehsan chowdhury</h1>
   <section className='container'>
   {/* user 1 */}
-  <User_feedback username="bati"><User image={bati}
+  <User_feedback username="mad"><User image={bati}
   date="11/12/24" msg="I am Batman" /></User_feedback>
   {/* user 2 */}
-  <User_feedback username="musi"><User image={musi} date="10/03/24"
+  <User_feedback username="clown"><User image={musi} date="10/03/24"
   msg="I am late!" /></User_feedback>
   {/* user 3 */}
-  <User_feedback username="musia"><User image={musia} date="08/20/24"
+  <User_feedback username="fun"><User image={musia} date="08/20/24"
   msg="Get more rest" /></User_feedback>
   </section>
   {/* POST COMMENTS */}
