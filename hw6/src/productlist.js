@@ -4,11 +4,11 @@ import Productcard from './productcard';
 import './productlist.css';
 
 //use local image
-import Headphones from './images/headphones.png'
-import Laptop from './images/laptop.png'
-import Smartphone from './images/smartphone.png'
-import Television from './images/television.png'
-import Mouse from './images/mouse.png'
+import Headphones from './3d Blue Headphones -1'
+import Laptop from './laptop-with-white-screen-isolated-white-wall'
+import Smartphone from './phone-png-17028'
+import Television from './television-tv-png-22240'
+import Mouse from './pngimg.com - computer_mouse_PNG7672'
 
 const Productlist = () => {
   const products = [
