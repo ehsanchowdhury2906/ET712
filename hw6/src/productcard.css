@@ -1,0 +1,17 @@
+.product-card{
+    border-radius: 5px;
+    border:solid ;
+    padding:10px;
+
+}
+
+.product-name, .product-price, .availability{
+    text-align:center;
+}
+
+.product-image{
+    height:100px;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
