@@ -1,20 +1,32 @@
 import React from "react";
 import './App.css';
 
-function Cart({ cartItems }) {
-    return (
-      <div>
-        <h1>Cart Items</h1>
-        {cartItems.map(function(product) { return (
-        <div key={product.id}>{product.name}</div>
-        )})}
-        {/*<h1 className="h1">Your Cart</h1>
-        {cartItems[0] && <div>{cartItems[0].name}</div>}
-        {cartItems[1] && <div>{cartItems[1].name}</div>}
-        {cartItems[2] && <div>{cartItems[2].name}</div>}
-        {cartItems.length === 0 && <p>Empty cart</p>}*/}
-      </div>
-    );
-  }
+function Cart({ cartItems, removeFromCart }) {
+  const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 
-  export default Cart;
+  return (
+    <div className="cart-page">
+      <h1>Cart Items</h1>
+
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty.</p>
+      ) : (
+        <>
+          <ul>
+            {cartItems.map((product, index) => (
+              <li key={index} className="cart-item">
+                {product.name} - ${product.price.toFixed(2)}
+                <button onClick={() => removeFromCart(product.id)} style={{ marginLeft: "10px" }}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+          <h3>Total: ${total.toFixed(2)}</h3>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default Cart;
