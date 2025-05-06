@@ -7,9 +7,9 @@ const id = function(id){
 }
 
 const email = function(e){
-    return `email address = $[e]`
+    return `email address = ${e}`
 }
 
-module.exports.helper = helper 
+module.exports.helper = helper
 module.exports.id = id
 module.exports.email = email
