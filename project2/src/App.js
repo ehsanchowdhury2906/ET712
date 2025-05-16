@@ -5,10 +5,10 @@ import Cart from './components/Cart';
 import Navbar from './components/Navbar';
 
 // Import images
-import cat1_img1 from './assets/cat1_product1.png';
-import cat1_img2 from './assets/cat1_product2.png';
-import cat1_img3 from './assets/cat1_product3.png';
-import cat1_img4 from './assets/cat1_product4.png';
+import cat1_img1 from '.pexels-asphotograpy-887751.jpg';
+import cat1_img2 from '.e1a84655-61ae-495b-9c9d-b62e50f2c9e1.jpg';
+import cat1_img3 from '.3207179.jpg';
+import cat1_img4 from '.pexels-solliefoto-336948.png';
 
 import cat2_img1 from './assets/cat2_product1.png';
 import cat2_img2 from './assets/cat2_product2.png';
