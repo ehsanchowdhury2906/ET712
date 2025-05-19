@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import './App.css'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from './ProductList';
 import Cart from './Cart';
 import Navbar from './Navbar';
+import Home from './Home'; // Import the new Home component
 
-import { products } from './products';  // import the products object
+import { products } from './products';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -37,10 +39,7 @@ function App() {
           element={<ProductList products={products.category2} addToCart={addToCart} />}
         />
         <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-        <Route
-          path="/"
-          element={<div>Welcome! Please select a category from the navigation.</div>}
-        />
+        <Route path="/" element={<Home />} /> {/* ✅ Uses new Home component */}
       </Routes>
     </Router>
   );
