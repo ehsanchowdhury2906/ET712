@@ -259,7 +259,7 @@ a {
 }
 
 /* ============================ */
-/*         Cart Section         */
+/* Cart Section */
 /* ============================ */
 .cart-container {
   padding: 2rem;
@@ -311,4 +311,23 @@ a {
   font-size: 1.1rem;
   border-top: 1px solid #ddd;
   padding-top: 1rem;
+}
+
+/* ============================ */
+/* Be Ready Coming Soon Gallery */
+/* ============================ */
+.coming-soon-gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.coming-soon-gallery img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
